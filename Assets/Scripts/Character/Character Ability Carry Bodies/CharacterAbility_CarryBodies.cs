@@ -64,10 +64,6 @@ public class CharacterAbility_CarryBodies : MonoBehaviour
             _bodyBags.Remove(_bodyBags[i]);
         }
 
-        //foreach (BodyBag bag in _bodyBags)
-        //{
-        //}
-
         _bodyBags.Clear();
     }
 

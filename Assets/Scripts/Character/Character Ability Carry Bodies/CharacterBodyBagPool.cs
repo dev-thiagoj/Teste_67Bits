@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterBodyBagPool : MonoBehaviour
@@ -21,18 +19,17 @@ public class CharacterBodyBagPool : MonoBehaviour
         CreateBagsPool((int)levelManager.level);
     }
 
-    int GetSetupFromCharacterLevelManager(int level)
+    int GetBagAmountFromCharacterLevelManager(int level)
     {
-        int setup = levelManager.GetBagAmountFromSetup(level);
-        
-        return setup;
+        int amount = levelManager.GetBagAmountFromSetup(level);
+        return amount;
     }
 
     public void CreateBagsPool(int level)
     {
         carryBodies.DeleteBagBodies();
 
-        bagPoolSize = GetSetupFromCharacterLevelManager(level);
+        bagPoolSize = GetBagAmountFromCharacterLevelManager(level);
 
         for (int i = 0; i < bagPoolSize; i++)
         {

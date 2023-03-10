@@ -81,9 +81,6 @@ public class CharacterLevelManager : MonoBehaviour
     public int GetBagAmountFromSetup(int value)
     {
         LevelSetup set = setup.Find(k => k.level == (CharacterLevel)value);
-
-        Debug.Log(set.bagsAmountPerLevel);
-
         return set.bagsAmountPerLevel;
     }
 

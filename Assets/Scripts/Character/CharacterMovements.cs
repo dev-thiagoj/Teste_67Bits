@@ -5,6 +5,7 @@ public class CharacterMovements : CharacterInputsBase
 {
     public static CharacterMovements Instance { get; private set; }
 
+    public Vector3 movement;
     public Animator animator { get; private set; }
     CharacterController _controller;
 
@@ -36,8 +37,6 @@ public class CharacterMovements : CharacterInputsBase
         PlayerMovement();
     }
 
-
-    public Vector3 movement;
 
     void PlayerMovement()
     {
